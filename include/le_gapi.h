@@ -1,6 +1,6 @@
 /*****************************************/
 /* LICENSED UNDER THE 2LD OSL            */
-/* LE-GAPI - v0.4                        */
+/* LE-GAPI - v0.5                        */
 /* include/le_gapi.h                     */
 /* TODO: IMPROVE THIS                    */
 /*****************************************/
@@ -21,18 +21,22 @@ typedef struct {
     BITMAPINFO bmi;   // Windows bitmap header info
     HWND hwnd;        // Window handle
     HDC hdc;          // Device context
-    int closed;       // Did the user close the window?
+    
+    /* TODO: Replace `int closed;` with something better */
+    int closed;       // Did the user close the window? For this, I use an int but I think this needs to be changed & has the potential to be replaced with something far better
+   
 
     // Texture system
     void **tex_pixels;
     int *tex_w, *tex_h;
     int tex_cap;
-} LG_Context;
+} LE_C; // Instead of larger words, we use smaller words such as LE_C to make it easy
+// LE_C stands for LE_Context
 
 // API functions
-LG_Context *lg_create(int width, int height, const char *title, void *platform_window);
-void lg_destroy(LG_Context *ctx);
-void lg_clear(LG_Context *ctx, uint32_t rgba);
+LE_C *le_cr(int width, int height, const char *title, void *platform_window); // le_cr stands for le_create
+void le_d(LE_Context *ctx); // le_d stands for
+void le_clear(LE_Context *ctx, uint32_t rgba);
 uint32_t lg_make_color(uint8_t r,uint8_t g,uint8_t b,uint8_t a);
 void lg_present(LG_Context *ctx);
 int lg_poll_events(LG_Context *ctx);
