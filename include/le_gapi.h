@@ -30,26 +30,28 @@ typedef struct {
     void **tex_pixels;
     int *tex_w, *tex_h;
     int tex_cap;
-} LE_C; // Instead of larger words, we use smaller words such as LE_C to make it easy
-// LE_C stands for LE_Context
+} LE_C; // Instead of larger words, we use smaller words such as LE_C to make it easy for programmers
+// LE_Context
 
 // API functions
-LE_C *le_cr(int width, int height, const char *title, void *platform_window); // le_cr stands for le_create
-void le_d(LE_Context *ctx); // le_d stands for
-void le_clear(LE_Context *ctx, uint32_t rgba);
-uint32_t lg_make_color(uint8_t r,uint8_t g,uint8_t b,uint8_t a);
-void lg_present(LG_Context *ctx);
-int lg_poll_events(LG_Context *ctx);
+LE_C *le_cr(int width, int height, const char *title, void *platform_window); // le_create
+void le_d(LE_C *ctx); // le_delete
+void le_cl(LE_C *ctx, uint32_t rgba); // le_clear
+uint32_t le_mc(uint8_t r,uint8_t g,uint8_t b,uint8_t a); // le_make_color
+void le_p(LE_C *ctx); // le_present
+int le_pe(LE_C *ctx); // le_poll_events
 
-int lg_create_texture_internal(LG_Context *ctx, int w, int h, const void *rgba_bytes);
-void lg_destroy_texture(LG_Context *ctx, uint32_t handle);
+int le_crtext(LE_C *ctx, int w, int h, const void *rgba_bytes); // le_create_texture, used for making textures
+void le_desttext(LE_C *ctx, uint32_t handle); // le_destroy_texture, used for destroying textures
 
 typedef struct { 
     float x,y,w,h; 
     float u0,v0,u1,v1; 
     int tex; 
     uint32_t tint; 
-} LG_Quad;
-void lg_draw_quads(LG_Context *ctx, const LG_Quad *quads, int count);
+} LE_Q;
+// LE_Quad
+
+void le_dq(LE_C *ctx, const LE_Q *quads, int count);
 
 #endif
