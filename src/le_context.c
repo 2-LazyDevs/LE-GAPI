@@ -29,7 +29,7 @@ LE_C *le_cr(int width, int height, const char *title, void *platform_window){
 
     if(!hwnd) return NULL;
 
-    le_c *ctx = (le_c*)malloc(sizeof(LE_C));
+    LE_C *ctx = (LE_C*)malloc(sizeof(LE_C));
     memset(ctx,0,sizeof(*ctx));
     ctx->width = width; ctx->height = height;
     ctx->pixels = (uint32_t*)malloc(width*height*sizeof(uint32_t));
@@ -57,7 +57,7 @@ LE_C *le_cr(int width, int height, const char *title, void *platform_window){
     return ctx;
 }
 
-void le_d(le_c *ctx){
+void le_d(LE_C *ctx){
     if(!ctx) return;
     ReleaseDC(ctx->hwnd, ctx->hdc);
     DestroyWindow(ctx->hwnd);
@@ -67,7 +67,7 @@ void le_d(le_c *ctx){
     free(ctx);
 }
 
-int le_pe(le_c *ctx){
+int le_pe(LE_C *ctx){
     MSG msg;
     while(PeekMessage(&msg, NULL, 0,0, PM_REMOVE)){
         TranslateMessage(&msg);
@@ -76,7 +76,7 @@ int le_pe(le_c *ctx){
     return ctx->closed ? 0 : 1;
 }
 
-void le_p(le_c *ctx){
+void le_p(LE_C *ctx){
     StretchDIBits(ctx->hdc, 0,0,ctx->width,ctx->height,
                   0,0,ctx->width,ctx->height,
                   ctx->pixels, &ctx->bmi, DIB_RGB_COLORS, SRCCOPY);
