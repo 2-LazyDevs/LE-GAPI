@@ -32,7 +32,7 @@ int WINAPI WinMain(HINSTANCE hInst, HINSTANCE hPrev, LPSTR lpCmdLine, int nShowC
         le_frect(ctx, 400, 100, 120, 80, le_mc(255,0,0,255));                  // red rectangle (moved right)
         le_dp(ctx, 320, 240, le_mc(0,255,0,255));                              // green pixel in center
         le_drcircle(ctx, 150, 350, 50, le_mc(255,255,0,255));                  // Yellow unfilled circle (moved down)
-        lg_fcircle(ctx, 500, 300, 75, lg_make_color(0,0,255,255));         // Blue filled circle (moved right)
+        le_fcircle(ctx, 500, 300, 75, le_mc(0,0,255,255));                     // Blue filled circle (moved right)
 
         le_wrtext(ctx, 50, 20, "Hello, LE-GAPI!", le_mc(255, 255, 255, 255));
         le_wrtext(ctx, 50, 40, "This is bitmap font rendering in LE-GAPI", le_mc(0, 200, 255, 255));
