@@ -35,7 +35,7 @@ typedef struct {
 
 // API functions
 LE_C *le_cr(int width, int height, const char *title, void *platform_window); // le_create
-void le_d(LE_C *ctx); // le_delete
+void le_d(LE_C *ctx); // le_delete/destroy
 void le_cl(LE_C *ctx, uint32_t rgba); // le_clear
 uint32_t le_mc(uint8_t r,uint8_t g,uint8_t b,uint8_t a); // le_make_color
 void le_p(LE_C *ctx); // le_present
