@@ -26,7 +26,7 @@ void le_drl(LE_C *ctx, int x0, int y0, int x1, int y1, uint32_t color) {
     int err = dx + dy;
 
     while (1) {
-        le_drl(ctx, x0, y0, null, null, color);
+        le_drl(ctx, x0, y0, x1, y1, color);
         if (x0 == x1 && y0 == y1) break;
         int e2 = 2 * err;
         if (e2 >= dy) { err += dy; x0 += sx; }
