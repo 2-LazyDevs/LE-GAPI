@@ -14,7 +14,7 @@
 
 void le_dp(LE_C *ctx, int x, int y, uint32_t color);                        // le_draw_pixel, draws a single pixel on to the screen
 
-void le_drl(LE_C *ctx, int x0, int y0, int x1, int y1, uint32_t color);     // le_draw_line, used to draw a line via the Bresenham algorithm
+void le_drl(LE_C *ctx, int x0, int y0, int x1, int y1, uint32_t color);      // le_draw_line, used to draw a line via the Bresenham algorithm
 
 void le_frect(LE_C *ctx, int x, int y, int w, int h, uint32_t color);       // le_fill_rect, fills a rectangle
 
