@@ -42,7 +42,7 @@ void le_p(LE_C *ctx); // le_present
 int le_pe(LE_C *ctx); // le_poll_events
 
 int le_crtext(LE_C *ctx, int w, int h, const void *rgba_bytes); // le_create_texture, used for making textures
-void le_desttext(LE_C *ctx, uint32_t handle); // le_destroy_texture, used for destroying textures
+void le_desttext(LE_C *ctx, uint32_t handle);                   // le_destroy_texture, used for destroying textures
 
 typedef struct { 
     float x,y,w,h; 
