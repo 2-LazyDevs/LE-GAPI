@@ -52,6 +52,6 @@ typedef struct {
 } LE_Q;
 // LE_Quad
 
-void le_dq(LE_C *ctx, const LE_Q *quads, int count);
+void le_dq(LE_C *ctx, const LE_Q *quads, int count); // le_draw_quads, used for drawing quads
 
 #endif
