@@ -11,6 +11,9 @@
 
 #include <stdint.h>
 
+// LE-GAPI HEADER
+// Importing le_core.h as it has the core functionality
+
 #include "le_core.h"
 
 typedef struct { 

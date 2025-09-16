@@ -1,6 +1,6 @@
 /*****************************************/
 /* LICENSED UNDER THE 2LD OSL            */
-/* LE-GAPI - v0.5                        */
+/* LE-GAPI - v0.6                        */
 /* include/le_draw.h                     */
 /* TODO: IMPROVE THIS                    */
 /*****************************************/
@@ -8,7 +8,7 @@
 #ifndef LE_DRAW_H
 #define LE_DRAW_H
 
-#include "le_gapi.h"
+#include "le_core.h"
 
 #include <stdint.h>
 

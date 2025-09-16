@@ -19,7 +19,13 @@ typedef struct {
     BITMAPINFO bmi;    // Windows bitmap header info
     HWND hwnd;         // Window handle
     HDC hdc;           // Device context
-    int closed;        // TODO: Replace with proper event state system later
+
+    int closed;        /* TODO: Replace with proper event state system later */
+    
+    // Texture system
+    void **tex_pixels;
+    int *tex_w, *tex_h;
+    int tex_cap;
 } LE_C; // LE_Context
 
 // Core lifecycle
