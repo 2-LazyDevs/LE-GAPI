@@ -1,11 +1,11 @@
 /*****************************************/
 /* LICENSED UNDER THE 2LD OSL            */
-/* LE-GAPI - v0.5                        */
+/* LE-GAPI - v0.6                        */
 /* src/le_texture.c                      */
 /* TODO: IMPROVE THIS                    */
 /*****************************************/
 
-#include "../include/le_gapi.h"
+#include "../include/le_texture.h"
 #include <stdlib.h>
 #include <string.h>
 

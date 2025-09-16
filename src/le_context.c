@@ -1,11 +1,11 @@
 /*****************************************/
 /* LICENSED UNDER THE 2LD OSL            */
-/* LE-GAPI - v0.5                        */
+/* LE-GAPI - v0.6                        */
 /* src/le_context.c                      */
 /* TODO: IMPROVE THIS                    */
 /*****************************************/
 
-#include "../include/le_gapi.h"
+#include "../include/le_core.h"
 
 #include <stdlib.h>
 #include <string.h>

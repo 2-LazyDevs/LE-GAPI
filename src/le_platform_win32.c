@@ -1,11 +1,11 @@
 /*****************************************/
 /* LICENSED UNDER THE 2LD OSL            */
-/* LE-GAPI - v0.5                        */
+/* LE-GAPI - v0.6                        */
 /* src/le_platform_win32.c               */
 /* TODO: IMPROVE THIS                    */
 /*****************************************/
 
-#include "../include/le_gapi.h"
+#include "../include/le_core.h"
 #include <windows.h>
 
 LRESULT CALLBACK WndProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam){
