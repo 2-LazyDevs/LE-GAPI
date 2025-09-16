@@ -6,7 +6,7 @@
 /*****************************************/
 
 // LE-GAPI headers
-#include "../include/le_gapi.h"
+#include "../include/le_core.h"
 #include "../include/le_draw.h"
 
 // Trim unused parts of windows.h so the program compiles faster
