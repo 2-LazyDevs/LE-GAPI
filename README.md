@@ -1,13 +1,12 @@
 
-# LE-GAPI 
+# Choc
 
-LE-GAPI is a Graphics API for low end devices. 
-LE-GAPI stands for Low End - Graphics API (not entirely) but well, I (AR) don't have any good explaination in mind for why I call it LE-GAPI.
+Choc is a Graphics API for low end devices. 
 NOTICE: DEVELEOPMENT HAS BEEN STOPPED SO I (AR) CAN FOCUS ON MY HORROR GAME!
 ## Compiling locally:
 To compile locally, clone the repo via git:
 ```bash
-git clone https://github.com/2-LazyDevs/LE-GAPI.git
+git clone https://github.com/2-LazyDevs/Choc.git
 ```
 Then compile it using Microsoft Visual Studio Build Tools CL:
 ```bash
